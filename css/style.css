@@ -1,0 +1,381 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+body {
+  font-family: "Press Start 2P", cursive;
+  width: 100%;
+  height: 100vh;
+}
+
+/* div h1,
+div p {
+  color: rgb(254, 254, 254);
+
+  animation-duration: 5s;
+  animation-name: aparecer;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-fill-mode: both;
+}
+
+div img {
+  border-radius: 25px;
+} */
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.container {
+  padding-top: 2rem;
+}
+
+.copyright {
+  color: #3b3b3b;
+}
+
+/* Text aventure */
+
+.bodyTextAdventure {
+  background-image: url(../assets/imagenes/aldea1.jpg);
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contenedor {
+  width: 800px;
+  max-width: 80%;
+  background-color: #2b3467;
+  padding: 20px;
+  color: #fcffe7;
+  font-size: 20px;
+  text-align: center;
+  border-radius: 5px;
+  box-shadow: 0 0 10px 2px #bad7e9;
+  margin-bottom: 200px;
+}
+
+.btn-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  gap: 10px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.boton {
+  background-color: #fcffe7;
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  color: rgb(0, 0, 0);
+  outline: none;
+  cursor: pointer;
+}
+
+.boton:hover,
+img:hover {
+  animation: pulsar 2s ease-in-out;
+}
+
+div a button {
+  color: red;
+  margin-bottom: 150px;
+}
+
+.pantalla {
+  height: 500px;
+  width: 600px;
+  background-color: red;
+}
+
+/* @keyframes pulsar {
+  0% {
+    box-shadow: 0 0 25px #23829c, 0 0 40px #000000;
+  }
+} */
+
+/* Ball-game */
+
+.img-ball {
+  width: 600px;
+  height: 385px;
+}
+
+canvas {
+  background-color: rgb(53, 53, 53);
+  display: block;
+  margin: 0 auto;
+}
+
+#background {
+  width: 100%;
+  height: 100vh;
+}
+
+#arcadeMachine {
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: end;
+}
+
+main {
+  background-color: #231036;
+}
+
+.poster-1 {
+  pointer-events: none;
+  transform: rotate(1%);
+  position: absolute;
+  top: 25%;
+  left: 20%;
+  z-index: 0;
+}
+
+.poster-2 {
+  pointer-events: none;
+  transform: rotate(-2%);
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  z-index: 0;
+}
+
+.arcadeModel {
+  height: 275px;
+  width: 200px;
+  cursor: pointer;
+  margin-left: 3px;
+  background: url("/assets/imagenes/Arcade.svg") no-repeat center;
+  background-size: cover;
+  z-index: 2;
+}
+
+.arcadeModel:hover {
+  animation: pulso 1s ease-in-out infinite;
+}
+
+@keyframes pulso {
+  0% {
+    filter: drop-shadow(0px 0px 15px rgba(240, 241, 177, 0.3));
+  }
+
+  50% {
+    filter: drop-shadow(0px 0px 15px rgba(240, 241, 177, 0.5));
+  }
+
+  100% {
+    filter: drop-shadow(0px 0px 15px rgba(240, 241, 177, 0.3));
+  }
+}
+
+.arcadeModel p {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+  animation: pulsoTexto 2s infinite linear;
+  color: rgb(224, 142, 18);
+}
+
+@keyframes pulsoTexto {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.floor {
+  background: url("/assets/imagenes/floor.png") no-repeat center;
+  background-size: cover;
+  width: 100%;
+  height: 1.2rem;
+  z-index: 2;
+}
+
+.Cap {
+  z-index: 0;
+  height: 100vh;
+  width: 100%;
+  opacity: 0.4;
+  background-color: #3b3b3b;
+  position: absolute;
+  z-index: 1;
+}
+
+.mainDetail {overflow-x: hidden;
+  height: 100vh;
+  width: 100%;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+#DetailJuego {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 50%;
+  padding: 3rem;
+  animation: entradaArticle 1s ;
+}
+
+#DetailJuego h1 {
+  margin-top: 5rem;
+}
+
+#DetailJuego p {
+  font-size: 0.5rem;
+  margin-top: 2rem;
+}
+
+#DetailJuego button {
+  border: 0px;
+  transition: all 0.1s linear;
+}
+#DetailJuego button:active {
+  transition: all 0.1s ease-in-out;
+  transform: translateY(2%) scale(0.9);
+  box-shadow: none;
+}
+
+.containerButtons {
+  height: 20%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+
+.buttonStart {
+  color: white;
+  background-color: #f82b2b;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  font-size: 0.5rem;
+  box-shadow: #8d1c1c 0px 10px 0px 0.5px;
+  margin-right: 1rem;
+}
+.buttonHome {
+  color: white;
+  background-color: rgb(51, 161, 51);
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  font-size: 0.4rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-shadow: rgb(41, 128, 41) 0px 7px 0px 0.5px;
+}
+
+.buttonStart:active {
+  background-color: #cc2525;
+}
+
+.buttonHome:active {
+  background-color: #298a29;
+}
+
+.buttonHome img {
+  height: 25%;
+  width: 25%;
+}
+
+
+
+
+
+
+@keyframes entradaImg {
+
+  0%{transform: translateX(-50%);}
+
+  100% {transform: translateX(0%);}
+}
+
+.containerArcadeImg {
+  height: 100%;
+  width: 50%;
+animation: entradaImg 1s ;
+  background: url("/assets/imagenes/Arcade.svg") center no-repeat;
+  background-size: contain;
+
+
+}
+
+
+@keyframes entradaArticle {
+
+  0%{transform: translateX(100%);}
+
+  100% {transform: translateX(0%);}
+}
+ 
+
+
+@keyframes disolver {
+
+  0% {opacity: 1;}
+
+  50%{opacity: 0;}
+
+  100%{opacity: 0;}
+  
+}
+
+.disolver {animation: disolver .9s linear !important;}
+
+/* 
+
+Arreglar el porque no lo toma normalmente */
+.rojo {animation: disolver .9s linear  !important;}
+
+#arcadeMachineImg {
+
+  display: flex;
+  justify-content: center;
+
+
+}
+
+#arcadeMachineImg video {
+ 
+  margin-bottom: 12rem;
+  width: 400px;
+
+}
